@@ -61,7 +61,10 @@ if [[ "${LOCAL_INSTALL,,}" == "true" ]]; then
     }
     echo "Repository cloned successfully."
     echo ""
-    usage_local
+    echo "Please run the following:"
+    echo "cd $(basename "${LOCAL_REPO_URL}" .git)"
+    echo "./${SCRIPT_NAME} run"
+    echo ""
     exit 0
 fi
 
@@ -89,7 +92,7 @@ if [[ "${LOCAL_RUN,,}" == "true" ]]; then
         echo "Building and running the Docker container..."
         docker build -t ezy .
         docker run --rm --name ezy-iesb ezy python main.py || {
-            echo "Erro ao executar a aplicação."
+            echo "Failed to run the Docker container."
             exit 1
         }
     else
