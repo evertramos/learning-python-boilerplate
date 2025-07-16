@@ -20,6 +20,7 @@ usage_local() {
     echo "Options:"
     echo "  -i, --install   Install dependencies"
     echo "  -r, --run       Run the application"
+    echo "  -d, --dev       Run the application in development mode"
     echo "  -h, --help      Show this help message"
 }
 
