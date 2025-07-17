@@ -18,29 +18,29 @@ LOCAL_RUN=false
 usage_local() {
     echo "Usage: $SCRIPT_NAME [options]"
     echo "Options:"
-    echo "  -i, --install   Install dependencies"
-    echo "  -r, --run       Run the application"
-    echo "  -d, --dev       Run the application in development mode"
-    echo "  -h, --help      Show this help message"
+    echo "  -i, install   Install dependencies"
+    echo "  -r, run       Run the application"
+    echo "  -d, dev       Run the application in development mode"
+    echo "  -h, help      Show this help message"
 }
 
 # Process arguments
 while [[ $# -gt 0 ]]
 do
     case "$1" in
-        install|-i)
+        -i | install)
         LOCAL_INSTALL=true
         shift 1
         ;;
-        run|-r)
+        -r | run)
         LOCAL_RUN=true
         shift 1
         ;;
-        dev|-d)
+        -d | dev)
         LOCAL_DEV=true
         shift 1
         ;;
-        -h | --help)
+        -h | help)
         usage_new_site
         exit 0
         ;;
