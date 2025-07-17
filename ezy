@@ -90,8 +90,8 @@ if [[ "${LOCAL_RUN,,}" == "true" ]]; then
     # Run the applicaetion
     if [[ "${LOCAL_DOCKER,,}" == "true" ]]; then
         echo "Building and running the Docker container..."
-        docker build -t ezy .
-        docker run --rm -it --name ezy-iesb ezy python main.py || {
+        docker build -t ezy-python .
+        docker run --rm -it --name ezy-iesb ezy-python python main.py || {
             echo "Failed to run the Docker container."
             exit 1
         }
@@ -104,7 +104,7 @@ fi
 # Run dev
 if [[ "${LOCAL_DEV,,}" == "true" ]]; then
     echo "Running the application in development mode..."
-    docker run --rm -it -v "$(pwd)/src":/app ezy python3 /app/main.py
+    docker run --rm -it -v "$(pwd)/src":/app ezy-python python3 /app/main.py
 fi
 
 exit 0
