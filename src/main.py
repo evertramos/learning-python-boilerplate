@@ -1,1 +1,2 @@
-print("Hello, World!")
+
+print('The Spirit is thinking...')
