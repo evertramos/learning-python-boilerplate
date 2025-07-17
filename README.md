@@ -13,17 +13,17 @@ You must run this in a Unix-like shell (such as Linux, macOS, or WSL).
 You can clone manually and run the `ezy run` script or just run the following:
 
 ```bash
-curl -sSL https://raw.githubusercontent.com/evertramos/learning-python-001/main/ezy | bash -s install
+curl -sSL https://raw.githubusercontent.com/evertramos/<REPO_NAME>/main/ezy | bash -s install
 ```
 
 Or you could run with wget:
 ```bash
-wget -qO- https://raw.githubusercontent.com/evertramos/learning-python-001/main/ezy | bash -s install
+wget -qO- https://raw.githubusercontent.com/evertramos/<REPO_NAME>/main/ezy | bash -s install
 ```
 
 ### Run the application
 ```bash
-cd learning-python-001
+cd <REPO_NAME>
 ./ezy run 
 ```
 
