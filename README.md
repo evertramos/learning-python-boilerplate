@@ -27,6 +27,11 @@ cd <REPO_NAME>
 ./ezy run 
 ```
 
+You can also run in development mode:
+```bash
+./ezy dev 
+```
+
 ### Requirements 
 
 You must have **docker** or **python** installed.
